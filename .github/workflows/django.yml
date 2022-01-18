@@ -33,5 +33,6 @@ jobs:
       with:
         image: harshagr63/django_demo_github
         registry: docker.io
+        tags: v1
         username: ${{ secrets.DOCKER_HUB_USERNAME }}
         password: ${{ secrets.DOCKER_HUB_PASSWORD }}
