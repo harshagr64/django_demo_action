@@ -28,3 +28,10 @@ jobs:
     - name: Run Tests
       run: |
         python demoapp/manage.py test
+    - name: Pushing an Image
+      uses: mr-smithers-excellent/docker-build-push@v5
+      with:
+        image: harshagr63/django_demo_github
+        registry: docker.io
+        username: ${{ secrets.DOCKER_HUB_USERNAME }}
+        password: ${{ secrets.DOCKER_HUB_PASSWORD }}
