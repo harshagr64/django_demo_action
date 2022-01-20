@@ -51,7 +51,7 @@ jobs:
           key: ${{ secrets.AWS_PRIVATE_KEY  }}
           script: |
             docker pull harshagr63/django_demo_github:v1
-            docker stop $(docker ps -aq)
+            docker stop $(docker ps -aq  --filter ancestor=harshagr63/django_demo_github:v1)
             docker run -d -p 8000:8000 harshagr63/django_demo_github:v1 
             
             
